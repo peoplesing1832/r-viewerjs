@@ -1,0 +1,72 @@
+{
+  "name": "r-viewerjs",
+  "version": "0.0.1",
+  "description": "Image viewer based on viewerjs",
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "clear": "",
+    "build": "",
+    "declaration": "",
+    "lint:style": "",
+    "lint:script": "",
+    "lint": "",
+    "style:fix": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peoplesing1832/r-viewerjs.git"
+  },
+  "keywords": [
+    "image",
+    "viewerjs",
+    "react",
+    "preview"
+  ],
+  "author": "Frank Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peoplesing1832/r-viewerjs/issues"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.3",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.8.7",
+    "viewerjs": "^1.8.0"
+  },
+  "homepage": "https://github.com/peoplesing1832/r-viewerjs#readme"
+}

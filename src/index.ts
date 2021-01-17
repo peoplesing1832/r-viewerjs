@@ -21,7 +21,7 @@ const createElement = (
     const imgEle = document.createElement('img');
     const entries = Object.entries(image);
     entries.forEach(([key, value]) => imgEle.setAttribute(key, value as any));
-    if (errImg && viewer) {
+    if (errImg) {
       imgEle.addEventListener('error', () => {
         image.setAttribute('src', errImg);
         viewer.update();

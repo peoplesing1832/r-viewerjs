@@ -6,5 +6,5 @@ declare type Image = Partial<Omit<HTMLImageElement, 'src'>> & {
 declare type Options = Viewer.Options & {
     errImg?: string;
 };
-declare const createViewer: (image: Image | Image[], options?: Options) => any;
+declare const createViewer: (image: Image | Image[], options?: Options) => Viewer;
 export default createViewer;

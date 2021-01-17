@@ -38,7 +38,7 @@ module.exports = merge(WebpackBaseConfig, {
       filename: `[file].map`
     }),
     new MiniCssExtractPlugin({
-      filename: '[contenthash].css'
+      filename: 'fast-viewerjs.css'
     }),
   ]
 })

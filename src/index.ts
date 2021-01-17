@@ -41,7 +41,7 @@ const createViewer = (
     image = [image]
   }
   let viewer
-  const { errImg = '', ...args } = options;
+  const { errImg = '', ...args } = options || {};
 
   const ele = createElement(image, errImg, viewer);
   viewer = new Viewer(ele, {

@@ -31,6 +31,7 @@ const createElement = (
     fragment.appendChild(li.appendChild(imgEle));
   });
   ul.appendChild(fragment);
+  return ul;
 };
 
 const createViewer = (
@@ -40,7 +41,7 @@ const createViewer = (
   if (!Array.isArray(image)) {
     image = [image]
   }
-  let viewer
+  let viewer!:Viewer;
   const { errImg = '', ...args } = options || {};
 
   const ele = createElement(image, errImg, viewer);

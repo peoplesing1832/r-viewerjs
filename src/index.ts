@@ -23,7 +23,7 @@ const createElement = (
     entries.forEach(([key, value]) => imgEle.setAttribute(key, value as any));
     if (errImg) {
       imgEle.addEventListener('error', () => {
-        image.setAttribute('src', errImg);
+        imgEle.setAttribute('src', errImg);
         viewer.update();
         viewer.view(index);
       });

@@ -12,7 +12,9 @@ type Options = Viewer.Options & {
 const createElement = (
   images: Image[],
   errImg: string,
-  viewer: Viewer
+  viewer: {
+    viewer: Viewer | null;
+  }
 ) => {
   const ul = document.createElement('ul');
   const fragment = document.createDocumentFragment();
@@ -24,8 +26,8 @@ const createElement = (
     if (errImg) {
       imgEle.addEventListener('error', () => {
         imgEle.setAttribute('src', errImg);
-        viewer.update();
-        viewer.view(index);
+        (viewer.viewer as Viewer).update();
+        (viewer.viewer as Viewer).view(index);
       });
     }
     fragment.appendChild(li.appendChild(imgEle));
@@ -41,14 +43,18 @@ const createViewer = (
   if (!Array.isArray(image)) {
     image = [image]
   }
-  let viewer!:Viewer;
+  let viewer: {
+    viewer: Viewer | null;
+  } = {
+    viewer: null
+  };
   const { errImg = '', ...args } = options || {};
 
   const ele = createElement(image, errImg, viewer);
-  viewer = new Viewer(ele, {
+  viewer.viewer = new Viewer(ele, {
     ...args,
   });
-  return viewer;
+  return viewer.viewer;
 };
 
 export default createViewer;
